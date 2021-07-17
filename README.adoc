@@ -35,6 +35,20 @@ func main() {
 
 ----
 
+== NEXT
+
+- [ ] Save (Upsert)
+- [ ] SaveAll
+- [ ] Add Tags for: `RAW SQL` and `FindBy` actions.
++
+[source,go]
+----
+type User struct {
+	Id		uuid.UUID	`json:"id" gorm:"primaryKey;type:uuid;default:gen_random_uuid()"`
+	Name 	string		`json:"name" query:'SELECT * FROM users where Name = ?'`
+	Email 	string		`json:"email" findBy:'Email'`
+}
+----
 
 == Versions
 
