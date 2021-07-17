@@ -38,7 +38,7 @@ func main() {
 == NEXT Releases
 
 - [ ] Save (Upsert)
-- [ ] SaveAll
+- [ ] SaveAll, DeleteAll
 - [ ] Add Tags for: `RAW SQL` and `FindBy` actions.
 +
 [source,go]
