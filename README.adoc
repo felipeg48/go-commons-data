@@ -19,10 +19,16 @@ func main() {
 	// db :=  //Setup DB connection.
 
     var repo *CrudRepository = NewCrudRepository(db, User{}, uuid.UUID{})
-    repo.Save(&User{
+
+    // Save
+    user, _:= repo.Save(&User{
     	Name: "John",
     	Email: "john@email.com",
     })
+
+
+    // Find
+    result, _ := repo.FindById(user.Id)
 
     // That's it.
 }
