@@ -3,6 +3,33 @@
 This is a small library to have a CRUD actions over a DB engine.
 It uses https://gorm.io[^].
 
+== Example
+
+[source,go]
+----
+
+type User struct {
+	Id		uuid.UUID	`json:"id" gorm:"primaryKey;type:uuid;default:gen_random_uuid()"`
+	Name 	string		`json:"name"`
+	Email 	string		`json:"email"`
+}
+
+func main() {
+
+	// db :=  //Setup DB connection.
+
+    var repo *CrudRepository = NewCrudRepository(db, User{}, uuid.UUID{})
+    repo.Save(&User{
+    	Name: "John",
+    	Email: "john@email.com",
+    })
+
+    // That's it.
+}
+
+----
+
+
 == Versions
 
 [width="75%"]
