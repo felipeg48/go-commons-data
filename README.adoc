@@ -1,0 +1,15 @@
+= Data Commons for GORM
+
+This is a small library to have a CRUD actions over a DB engine.
+It uses https://gorm.io[^].
+
+== Versions
+
+[width="75%"]
+|=======
+|Version|Notes
+
+|v0.0.1|Initial Commit
+|=======
+
+Latest Push: *v0.0.1*
